@@ -1,0 +1,29 @@
+#maptitel {
+    font-family: helvetica;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fa6121;
+    text-align: center;
+}
+
+    
+#navmenu {
+
+    list-style: none;
+    width: 300px;
+    margin: 0 auto;
+    height: 20px;
+}
+
+#navmenu li {
+    float: left;
+    margin: 5px 10px;
+}
+
+#navmenu li a, #navmenu li a:hover {
+    color: #fa6121;
+    text-decoration: none;
+}
+
+
+    
