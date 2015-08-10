@@ -25,5 +25,9 @@
     text-decoration: none;
 }
 
-
-    
+#map {
+    padding-top: 20px;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
