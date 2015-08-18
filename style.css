@@ -12,7 +12,6 @@ body {
     font-weight: bold;
     color: #fa6121;
     text-align: center;
-
 }
 
 #allbutmain:hover {
@@ -25,17 +24,16 @@ body {
     height: auto;
     overflow-y: visible;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px 20px 20px 20px;
 }
 
 .mainpicture {
-    width: 500px;
-    height: 300px;
-    margin: 2px auto;
+    width: 45%;
+    margin: 7px auto;
     display: block;
-
 }
+
 #photo {
     width:100px;
     height:100px;
@@ -55,6 +53,7 @@ body {
     margin: 0 auto;
     height: 20px;
 }
+
 #navmenu li {
     float: left;
     margin: 5px 10px;

@@ -1,5 +1,4 @@
-
-body::after {
+/*body::after {
   content: "";
   background: url("bilder/ocean.jpg");
   opacity: 0.7;
@@ -9,7 +8,7 @@ body::after {
   right: 0;
   position: absolute;
   z-index: -1;   
-}
+}*/
 
 #Header {
     font-family: helvetica;
@@ -27,7 +26,6 @@ body::after {
     background-size: cover;
 }
 
-
 #navmenu {
     padding: 0;
     list-style: none;
@@ -35,10 +33,10 @@ body::after {
     margin: 0 auto;
     height: 40px;
 }
+
 #navmenu > li {
     float: left;
     margin: 5px 10px;
-    
 }
 
 #navmenu > li > a, #navmenu > li > a:hover {
