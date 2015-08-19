@@ -19,7 +19,7 @@ body {
 }
 
 #main {
-    width: 70%;
+    width: 60%;
     border-radius: 5px;
     height: auto;
     overflow-y: visible;
@@ -29,7 +29,7 @@ body {
 }
 
 .mainpicture {
-    width: 45%;
+    width: 100%;
     margin: 7px auto;
     display: block;
 }
@@ -64,5 +64,8 @@ body {
     text-decoration: none;
 }
 
+.articletitle {
+    margin-bottom: 20px;
+}
 
 
