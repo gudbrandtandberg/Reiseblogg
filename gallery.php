@@ -79,7 +79,7 @@
         ?>
         
             <?php foreach ($bilder as $bilde): ?>
-                <? if ($bilde == "." || $bilde == "..") continue;?>
+                <?php if ($bilde[0] == ".") continue;?>
                 
                 <div class="col-sm-3">
                 <a href="<?= $mappe."/".$bilde; ?>" class="thumbnail" data-gallery data-description="hei">
