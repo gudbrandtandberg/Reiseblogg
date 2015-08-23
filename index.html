@@ -16,46 +16,47 @@
       </head>
       
       <body>
-        
-            <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
-            
-            <!-- The container for the modal slides -->
-            <div class="slides"></div>
-            <!-- Controls for the borderless lightbox -->
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="close">×</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
-            <!-- The modal dialog, which will be used to wrap the lightbox content -->
-            <div class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title"></h4>
-                        </div>
-                        <div class="modal-body next"></div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default pull-left prev">
-                                <i class="glyphicon glyphicon-chevron-left"></i>
-                                Previous
-                            </button>
-                            <button type="button" class="btn btn-primary next">
-                                Next
-                                <i class="glyphicon glyphicon-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!--    GALLERY-MAL   -->
+        <div id="blueimp-gallery-arabia" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
+          <!-- The container for the modal slides -->
+          <div class="slides"></div>
+          <!-- Controls for the borderless lightbox -->
+          <h3 class="title"></h3>
+          <a class="prev">‹</a>
+          <a class="next">›</a>
+          <a class="close">×</a>
+          <a class="play-pause"></a>
+          <ol class="indicator"></ol>
+          <!-- The modal dialog, which will be used to wrap the lightbox content -->
+          <div class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title"></h4>
+                      </div>
+                      <div class="modal-body next"></div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-default pull-left prev">
+                              <i class="glyphicon glyphicon-chevron-left"></i>
+                              Previous
+                          </button>
+                          <button type="button" class="btn btn-primary next">
+                              Next
+                              <i class="glyphicon glyphicon-chevron-right"></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
         
         
+        <!--    HEADER    -->
+        <div class="headerwrapper">
           <img id="photo" src="bilder/diverse/sogg.jpg">
           
-          <h1 id="Header">Gudbrand &amp; Sarah's travelblog</h1>
+          <h1 id="header">Gudbrand &amp; Sarah's travelblog</h1>
            
           <div>
             <p id="maintext"> We are traveling through South-East Asia for 10 months. Follow our journey here.</p>
@@ -72,9 +73,13 @@
                 <a href="travelitinerary.html"> Itinerary </a>
             </li>
           </ul>
+        </div>
       
+      
+        <!--      HER BEGYNNER BLOGGEN     -->
         <div id="main">
  
+          <!--    ARABIA    -->
           <h2>Arabia <small>19.8.2015</small></h2>
             <p>
               After a lovely farewell dinner with family and friends, we finally set off for the Arabian Peninsula.
@@ -85,29 +90,29 @@
             </p>
             
             <p>
-            On our first day in Abu Dhabi we went to friday brunch - a foodfeast without like! As all the muslims are
-            off praying in the mosque, the expats and tourists enjoy unlimited food and drink in the city's hotels.
-            We filled our bellies as we never have before, with food from almost every corner of the world. Among the
-            winners were <a href="http://honestcooking.com/um-ali-egyptian-bread-pudding/">Um Ali</a>, <a href="https://en.wikipedia.org/wiki/Kanafeh">Kalafeh</a> and 
-            <a href="http://bennydoro.com/chef/recipes/moutabal-roasted-eggplant-dip/">Moutabal</a>.
+              On our first day in Abu Dhabi we went to friday brunch - a foodfeast without like! As all the muslims are
+              off praying in the mosque, the expats and tourists enjoy unlimited food and drink in the city's hotels.
+              We filled our bellies as we never have before, with food from almost every corner of the world. Among the
+              winners were <a href="http://honestcooking.com/um-ali-egyptian-bread-pudding/">Um Ali</a>, <a href="https://en.wikipedia.org/wiki/Kanafeh">Kalafeh</a> and <a href="http://bennydoro.com/chef/recipes/moutabal-roasted-eggplant-dip/">Moutabal</a>.
             </p>
             
             <p>
-            At 4:00 the next morning we hopped in a desert-bound Toyota Landcruiser driven by a friendly Indian gentleman.
-            After an hours peaceful drive through the desert highway we took a sharp right into the sand dunes. Fear
-            and panic filled the vehicle as the driver cranked the volume to the max and went bashing up and down and round
-            and round in the dunes. <span style="text-decoration: underline;">Click the sunrise for a short video!</span>
+              At 4:00 the next morning we hopped in a desert-bound Toyota Landcruiser driven by a friendly Indian gentleman.
+              After an hours peaceful drive through the desert highway we took a sharp right into the sand dunes. Fear
+              and panic filled the vehicle as the driver cranked the volume to the max and went bashing up and down and round
+              and round in the dunes. <span style="text-decoration: underline;">Click the sunrise for a short video!</span>
             </p>
             
-            <div id="links">
+            
                 <a href="bilder/diverse/bashing.mp4"
                     title="Dune Bashing"
-                    data-gallery
+                    data-gallery="#blueimp-gallery-arabia"
                     type="video/mp4"
                     data-poster="bilder/arabia/IMG_8045.JPG"
-                    data-sources='[{"href": "bilder/diverse/bashing.mp4", "type": "video/mp4"}]'
-                ><img class="artpic" src="bilder/arabia/IMG_8045.JPG"/></a>
-            </div>
+                    data-sources='[{"href": "bilder/diverse/bashing.mp4", "type": "video/mp4"}]'>
+                  <img class="artpic" src="bilder/arabia/IMG_8045.JPG"/>
+                </a>
+            
             
             <p>
             Eventually we came to a pause on the top
@@ -115,83 +120,99 @@
             </p>
             
             <div class="row">
-              <div class="col-sm-6"><img class="artpic" src="bilder/arabia/IMG_8049.JPG" /></div>
-              <div class="col-sm-6"><img class="artpic" src="bilder/diverse/tatooine.jpg" /></div>
+              <a href="bilder/arabia/IMG_8049.JPG" data-gallery="#blueimp-gallery-arabia">
+                <div class="col-sm-6">
+                  <img class="artpic" src="bilder/arabia/IMG_8049.JPG" />
+                </div>
+              </a>
+              <div class="col-sm-6">
+                <img class="artpic" src="bilder/diverse/tatooine.jpg" />
+              </div>
             </div>
             
             <p>
-            Later we went for a drive around Abu Dhabi with our excellent tour guides - The Pottsbergs. After a tour
-            of this most remarkable city we ended up at the Emirates Palace Hotel &mdash; one of only two seven star hotels
-            in the world (the other being in Dubai) &mdash; for our afternoon tea. The thing about this hotel is gold.
-            Gold-to-go ATM's, gold walls, gold paintings, gold furniture, gold food, but dissapointingly only silver spoons...
+              Later we went for a drive around Abu Dhabi with our excellent tour guides - The Pottsbergs. After a tour
+              of this most remarkable city we ended up at the Emirates Palace Hotel &mdash; one of only two seven star hotels
+              in the world (the other being in Dubai) &mdash; for our afternoon tea. The thing about this hotel is gold.
+              Gold-to-go ATM's, gold walls, gold paintings, gold furniture, gold food, but dissapointingly only silver spoons...
             </p>
             
             <div class="row">
-              <div class="col-sm-12">
-                <img class="artpic" src="bilder/diverse/gold.jpg" />
-              </div>
-              <div class="col-sm-12">
-                <img class="artpic" src="bilder/diverse/gold2.jpg" />
-              </div>
+              <a href="bilder/diverse/gold.jpg" data-gallery="#blueimp-gallery-arabia">
+                <div class="col-sm-12">
+                  <img class="artpic" src="bilder/diverse/gold.jpg" />
+                </div>
+              </a>
+              <a href="bilder/diverse/gold2.jpg" data-gallery="#blueimp-gallery-arabia" title="Emirates Palace">
+                <div class="col-sm-12">
+                  <img class="artpic" src="bilder/diverse/gold2.jpg" />
+                </div>
+              </a>
             </div>
 
             <p>
-            At this time, The Pottsbergs had to go back to work, so we headed north. And then west. First stop was
-            Dubai. Dubai was unbearable in many ways. Because of the extreme heat we spent the day rushing between
-            cafés and malls in complete cultural shock. Somewhere between the extremes of capitalism gone mad and
-            outdated religious tradition sat we, wondering how this could even be possible. In the evening however
-            we found the older parts of the city where we enjoyed walking around a maze of spice and gold markets
-            among friendly locals in the Souq of Dubai. 
+              At this time, The Pottsbergs had to go back to work, so we headed north. And then west. First stop was
+              Dubai. Dubai was unbearable in many ways. Because of the extreme heat we spent the day rushing between
+              cafés and malls in complete cultural shock. Somewhere between the extremes of capitalism gone mad and
+              outdated religious tradition sat we, wondering how this could even be possible. In the evening however
+              we found the older parts of the city where we enjoyed walking around a maze of spice and gold markets
+              among friendly locals in the Souq of Dubai. 
             </p>
             
             <div class="row">
-              <div class="col-sm-12">
-                <img class="artpic" src="bilder/diverse/souq.jpg" />
-              </div>
+              <a href="bilder/diverse/souq.jpg" data-gallery="#blueimp-gallery-arabia" title="Dubai Souq">
+                <div class="col-sm-12">
+                  <img class="artpic" src="bilder/diverse/souq.jpg" />
+                </div>
+              </a>
             </div>
             
             <p>
-            At the end of the day we jumped on a flight to Muskat, the capital city in the Sultanate of Oman.
-            Muskat stood in stark contrast to the city we had just left. Tucked away inbetween beautiful mountain
-            scenery and the Arabian sea lies a city with a highly visible cultural history and proud, hard-working,
-            friendly people. Although we never got to use our background story, we pretended to be newlyweds on our
-            honeymoon in the hotel we stayed at, in order to sleep in the same room. Thanks again to the Pottsbergs
-            for the hotel gift.
+              At the end of the day we jumped on a flight to Muskat, the capital city of the Sultanate of Oman.
+              Muskat stood in stark contrast to the city we had just left. Tucked away inbetween beautiful mountain
+              scenery and the Arabian sea lies a city with a prominent cultural history and proud, hard-working,
+              friendly people. Although we never got to use our background story, we pretended to be newlyweds on our
+              honeymoon in the hotel we stayed at, in order to sleep in the same room. Thanks again to the Pottsbergs
+              for the hotel gift.
             </p>
             
             <div class="row">
-              <div class="col-sm-12">
-                <img class="artpic" src="bilder/diverse/muskat.jpg" />
-              </div>
+              <a href="bilder/diverse/muskat.jpg" data-gallery="#blueimp-gallery-arabia" title="Muskat">
+                <div class="col-sm-12">
+                  <img class="artpic" src="bilder/diverse/muskat.jpg" />
+                </div>
+              </a>
             </div>
             
             <p>
             During our day we went to the old city, where they had a cultural museum, several old
             portugese forts, and one of Sultan Qaboos' palaces. We ended up in a museum chronicling the long and
             complicated French-Omani relationship. Several rooms were dedicated solely to pictures of the state visit
-            between Mitterrand and Sultan Qaboos of January '89. Later on we went to <a href="https://www.google.co.th/search?q=muscat+souq&espv=2&biw=1218&bih=679&source=lnms&tbm=isch&sa=X&ved=0CAYQ_AUoAWoVChMI1Nfum9G5xwIVShmOCh0_mQhV#tbm=isch&q=muttrah+souq">
-            Muttrah Souq</a>, an intricate web of
-            narrow market streets with shops selling antiques, jewlery, spices, clothing, fabrics, incence (Oman is
-            famous for its frankincense, notably brought as a gift to baby Jesus back in the day), and much much more.
-            We ended our day at a wonderful arabic restaurant with shish kebab, peppermint tea, shisha and Um Ali. 
+            between Mitterrand and Sultan Qaboos of January '89. Later on we went to <a href="https://www.google.co.th/search?q=muscat+souq&espv=2&biw=1218&bih=679&source=lnms&tbm=isch&sa=X&ved=0CAYQ_AUoAWoVChMI1Nfum9G5xwIVShmOCh0_mQhV#tbm=isch&q=muttrah+souq">Muttrah Souq</a>, an intricate web of narrow market streets with shops selling antiques, jewlery, spices, clothing, fabrics, incence (Oman is famous for its frankincense, notably brought as a gift to baby Jesus back in the day), and much much more. We ended our day at a wonderful arabic restaurant with shish kebab, peppermint tea, shisha and Um Ali. 
             </p>
             
             <p>
-              After heading back to Abu Dhabi and enjoying a few more days lazing indoors, we are setting of for the next
-              leg of our journey - Bangkok, Thailand! Stay tuned for more updates coming soon xoxo G & S
+              After heading back to Abu Dhabi to enjoy a few more days lazing indoors, we are setting of for the next
+              leg of our journey - Bangkok, Thailand! Stay tuned for more updates coming soon
             </p>
             
-          <h2 class="articletitle"> Take-off from Gardermoen <small> 13.8.2015</small></h2>
-          <img class="mainpicture" src="bilder/diverse/avreise.jpg">
+            <p style="text-align: center; color: #fa6121; font-weight: bold;">xoxo G & S</p>
           
-        
+          <!--    GARDEMOEN    -->
+          <h2>
+            Take-off from Gardermoen <small> 13.8.2015</small>
+          </h2>
           
-        </div>  
+          <div class="row">
+            <div class="col-sm-12">
+              <img class="artpic" src="bilder/diverse/avreise.jpg">
+            </div>
+          </div>
+          
+        </div> <!-- end #main -->
       
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
       <script src="Bootstrap-Image-Gallery-3.1.3/js/bootstrap-image-gallery.min.js"></script>
-      
-      </body>
-        
-    </html>
+  </body>      
+</html>
