@@ -1,7 +1,7 @@
 body {
     background-size: 100% 100%;
     font-family: helvetica;  
-    background-image: url("bilder/ocean.jpg");
+    background-image: url("bilder/diverse/ocean.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -12,7 +12,6 @@ body {
     font-weight: bold;
     color: #fa6121;
     text-align: center;
-
 }
 
 #allbutmain:hover {
@@ -20,22 +19,21 @@ body {
 }
 
 #main {
-    width: 70%;
+    width: 60%;
     border-radius: 5px;
     height: auto;
     overflow-y: visible;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px 20px 20px 20px;
 }
 
 .mainpicture {
-    width: 500px;
-    height: 300px;
-    margin: 2px auto;
+    width: 100%;
+    margin: 7px auto;
     display: block;
-
 }
+
 #photo {
     width:100px;
     height:100px;
@@ -55,6 +53,7 @@ body {
     margin: 0 auto;
     height: 20px;
 }
+
 #navmenu li {
     float: left;
     margin: 5px 10px;
@@ -65,5 +64,8 @@ body {
     text-decoration: none;
 }
 
+.articletitle {
+    margin-bottom: 20px;
+}
 
 

@@ -18,7 +18,8 @@
     
     <body>
         
-        
+
+    
       
         
         <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
@@ -64,7 +65,7 @@
                 <a href="index.html"> Home </a>
               </li>
               <li>
-                <a href="gallery.html"> Gallery </a>
+                <a href="gallery.php"> Gallery </a>
               </li>
               <li>
                 <a href="travelitinerary.html"> Itinerary </a>
@@ -72,18 +73,23 @@
         </ul>
         
         <div class="container">
+        <?php
+            $mappe = "bilder/arabia";
+            $bilder = scandir($mappe);
+        ?>
         
-            <!--<div class="col-sm-3">-->
-            <!--    <a href="bilder/ocean.jpg" class="thumbnail" data-gallery>-->
-            <!--        <div class="galleryphoto" style="background-image: url('bilder/ocean.jpg');"></div>-->
-            <!--    </a>-->
-            <!--</div>-->
-            <!---->
-            <!--<div class="col-sm-3">-->
-            <!--    <a href="bilder/sogg.jpg" class="thumbnail" data-gallery>-->
-            <!--        <div class="galleryphoto" style="background-image: url('bilder/sogg.jpg');"></div>-->
-            <!--    </a>-->
-            <!--</div>-->
+            <?php foreach ($bilder as $bilde): ?>
+                <? if ($bilde == "." || $bilde == "..") continue;?>
+                
+                <div class="col-sm-3">
+                <a href="<?= $mappe."/".$bilde; ?>" class="thumbnail" data-gallery data-description="hei">
+                <div class="galleryphoto" style="background-image: url('<?= $mappe."/".$bilde; ?>');"></div>
+                </a>
+                </div>           
+                
+            <?php endforeach ?>
+            
+        
         
         </div>
      
