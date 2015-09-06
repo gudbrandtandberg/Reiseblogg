@@ -15,7 +15,7 @@
         $jquery = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js";
         $bootstrap_image_css = "https://github.com/blueimp/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css"; //!!
         $bootstrap_image_js = "https://github.com/blueimp/Bootstrap-Image-Gallery/js/bootstrap-image-gallery.min.js"; //!!
-        $blueimp_css = "http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css";
+        $blueimp_css = "//blueimp.github.io/Gallery/css/blueimp-gallery.min.css";
         $blueimp_jquery_js = "http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js";
     }
 
