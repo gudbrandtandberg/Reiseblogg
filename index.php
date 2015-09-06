@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
       <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> G+S </title>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-        <link rel="stylesheet" href="Bootstrap-Image-Gallery-3.1.3/css/bootstrap-image-gallery.min.css">
-        
-        <link rel="stylesheet" href="style.css">
-      
+            <?php include("head.php"); ?>
+            <link rel="stylesheet" href="indexstyle.css">
+            <script type="text/javascript">
+                  $(document).ready(function(){
+                        $(".matbloggbody").hide();   
+                        $(".matbloggknapp").click(function(){
+                            if ($(".matbloggbody").is(":hidden")) {
+                              $(".matbloggknapp").html("Read less");
+                              $(".matbloggbody").show();
+                            } else {
+                              $(".matbloggknapp").html("Read more");
+                              $(".matbloggbody").hide();
+                            }
+                        });
+                  });
+            </script>
       </head>
       
       <body>
+            
         <!--    GALLERY-MAL   -->
         <div id="blueimp-gallery-arabia" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
           <!-- The container for the modal slides -->
@@ -117,6 +123,40 @@
           </div>
         </div>
         
+        <div id="blueimp-gallery-matblogg" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
+          <!-- The container for the modal slides -->
+          <div class="slides"></div>
+          <!-- Controls for the borderless lightbox -->
+          <h3 class="title"></h3>
+          <a class="prev">‹</a>
+          <a class="next">›</a>
+          <a class="close">×</a>
+          <a class="play-pause"></a>
+          <ol class="indicator"></ol>
+          <!-- The modal dialog, which will be used to wrap the lightbox content -->
+          <div class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title"></h4>
+                      </div>
+                      <div class="modal-body next"></div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-default pull-left prev">
+                              <i class="glyphicon glyphicon-chevron-left"></i>
+                              Previous
+                          </button>
+                          <button type="button" class="btn btn-primary next">
+                              Next
+                              <i class="glyphicon glyphicon-chevron-right"></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+                
         
         <!--    HEADER    -->
         <div class="headerwrapper">
@@ -135,10 +175,60 @@
         <!--      HER BEGYNNER BLOGGEN     -->
         <div id="main">
           <!--   BALI        -->
+          
+          <?php //include("matblogg1.php"); ?>
+          
           <h2>Bali</h2>
           <!--<h3>On the road again</h3>-->
-          <!--<h3>On the road</h3>-->
-          <h3>At Georg's <small>27.8.2015</small></h3>
+          <h3>Balian Beach</h3>
+          <p>
+            We left Seminyak in our rental car. Driving in Bali is quite an experience. Getting used to driving on the wrong side of the road was nothing, getting past the extreme awkwardness of signaling with the right hand and gear-shifting with the left was a bit challanging, but getting to grips with the driving culture most difficult of all. Roads consist of one lane in each direction, each lane about 3/4 the width of a car. This implies 'lane-sharing' which can be quite startling to say the least. Lots of mopeds, lots of slow moving wide trucks and lots of eager drivers makes for a chaotic experience. Honking your horn can mean anything &mdash; "Watch out here I come", "I'm going to overtake you", "Overtake me, please", "Be careful", "F*** you", "Hello!". After a practice drive to Sanur, we headed northwest for Balian Beach, a simple surfer community off the beaten path on the desolate west coast. There was nothing there but a small village, a couple of beach huts, sand and the sound of the waves. 
+            
+          </p>
+          <div class="row">
+            <a href="bilder/bali/baliansurfcamp.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/baliansurfcamp.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            Since this was a great spot for surfing we were eager to try for ourselves. After one hour, a nasty rash, a near-death experience and a displaced jaw we realized we were bathers, not surfers. However we weren't entirely discouraged, and didn't put the idea of us surfing quite behind us. In other words: to be continued... Here is Sarah with her surf instructor Ketut. 
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/sarahsurfer.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/sarahsurfer.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            Being on a budget we couldn't treat ourselves to both car and accomodation so we made a cozy little creep-inn in the back of our Toyota Avanza. This was actually quite fine. In spite of the awkward angles, lack of privacy, temperature regulation and facilities it was just fine. 
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/foranbilen.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/foranbilen.jpg" />
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="bilder/bali/soveibil.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/soveibil.JPG" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            We stayed in Balian for 4 days, enjoying every second. We relaxed, read books, practiced languages, surfed, did yoga, ate at the food market, and mingled with folks. The drive-thru travel format is great here in Bali, we get to see so much of the island, in our own pace, at our own fancy. Lots of pictures from the drive in the gallery :)
+          </p>
+          
+          <h3>At Georg's</h3>
           
           <p>
             Next stop: Bali! A magical Indonesian island with an inviting, relaxing, and mystical atmosphere. We started off together with Jørgen at his friend Georg's luxurious villa in Seminyak on the southwestern side of the island. 
@@ -176,11 +266,14 @@
           <!--   BANGKOK I   -->
           
           <h2>Bangkok<small> 24.8.2015</small></h2>
+<<<<<<< HEAD
             <!--dag 1: ankomst, hjem, ut på viva m j, tur i området, hjem prate, ut på tur, ananas, fritert banan
             dag 2: frokost og blogging, pad thai og sprit, ut på bar (roti)
             dag 3: dosa king, skytrain til elven, båt opp, tempel og buddha, gatemat frityr, siam paragon, bj, dosa king, hjem og film (roti)
             dag 4: opp og svømme, hjemme og lese, gatesuppe, mer svømme, hotel og aom, kao soi, 
             dag 5: opp og dra-->
+=======
+>>>>>>> 0a688314f82ffad3abe68263f75547ffb82314a7
             <p>
               Finally we arived at our first stop in South East Asia - Bangkok. What a city! Streetlife, flashing neon, crowds of people, dirt, cars, food &mdash; oh the food! Our first stay lasted four wonderful days. We began by establishing our headquarters in Jørgen's stylish 23. floor apartment in downtown Bangkok, check out the awesome view from our bed!
             </p>
@@ -215,9 +308,15 @@
                 <img class="artpic" src="bilder/thailand/vors.jpg" />
               </div>
               </a>
+<<<<<<< HEAD
               <a href="bilder/thailand/hore.jpg" data-gallery="#blueimp-gallery-thailandI">
               <div class="col-sm-6">
                 <img class="artpic" src="bilder/thailand/hore.jpg" />
+=======
+              <a href="bilder/thailand/street.jpg" data-gallery="#blueimp-gallery-thailandI">
+              <div class="col-sm-6">
+                <img class="artpic" src="bilder/thailand/street.jpg" />
+>>>>>>> 0a688314f82ffad3abe68263f75547ffb82314a7
               </div>
               </a>
             </div>
@@ -387,8 +486,13 @@
           
         </div> <!-- end #main -->
       
+<<<<<<< HEAD
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
       <script src="Bootstrap-Image-Gallery-3.1.3/js/bootstrap-image-gallery.min.js"></script>
+=======
+      <script src="<?=$blueimp_jquery_js;?>"></script>
+      <script src="<?=$bootstrap_image_js;?>"></script>
+>>>>>>> 0a688314f82ffad3abe68263f75547ffb82314a7
   </body>      
 </html>

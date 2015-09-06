@@ -9,20 +9,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> G&S reiseblogg</title>
-    
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"> </script>
-    <!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-    
-    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <link rel="stylesheet" href="Bootstrap-Image-Gallery-3.1.3/css/bootstrap-image-gallery.min.css">
 
+<head>
+    <?php include("head.php"); ?>
     <link rel="stylesheet" href="gallerystyle.css">
-        
 </head>
 
 <body>
@@ -63,26 +53,36 @@
     
     
     
-    
-    <h1 id="Header"> Gallery </h1>
+    <h1 id="header"> Gallery </h1>
     
     <?php include("navmeny.php"); ?>
     
     <div class="container">
         <?php
-            $bilder = scandir($mappe);
+            //$bilder skal være sortert! funker sånn ca...
+            //$bilder = scandir($mappe);
+            
+            $bilder = array();
+            $it = new DirectoryIterator($mappe);
+            $it->rewind();
+            while ($it->valid()) { 
+                $bilder[$it->getFilename()] = $it->getCTime(); 
+                $it->next();
+            }
+        
+            arsort($bilder);
+            $bilder = array_keys($bilder);  
+            
         ?>
         
         <?php if ($mappe == "bilder/") : ?>
         
              <?php foreach ($bilder as $albumnavn): ?>
-                <?php if ($albumnavn[0] == "." || $albumnavn == "diverse") continue;?>
+                <?php if ($albumnavn[0] == "." || $albumnavn == "diverse" || $albumnavn == "matblogg" || $albumnavn == "balikultur") continue;?>
                 
                 <?php
-                
                     $bildene = scandir($mappe.$albumnavn);
                     $coverbilde = $bildene[5];
-                                
                 ?>
                 
                 <div class="col-sm-3" >
@@ -110,8 +110,7 @@
         <?php endif; ?>
     </div>
  
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-    <!--<script src="Bootstrap-Image-Gallery-3.1.3/js/bootstrap-image-gallery.min.js"></script>        -->
+    <script src="<?=$blueimp_jquery_js;?>"></script>
+    <script src="<?=$bootstrap_image_js;?>"></script>
 </body>   
 </html>
