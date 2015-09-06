@@ -1,13 +1,4 @@
-#maptitel {
-    font-family: helvetica;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fa6121;
-    text-align: center;
-}
-
 #map {
-    padding-top: 20px;
     width: 1100px;
     margin: 0 auto;
     position: relative;
