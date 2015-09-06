@@ -66,7 +66,7 @@
             $it = new DirectoryIterator($mappe);
             $it->rewind();
             while ($it->valid()) { 
-                $bilder[$it->getFilename()] = $it->getCTime(); 
+                $bilder[$it->getFilename()] = $it->getMTime(); 
                 $it->next();
             }
         
