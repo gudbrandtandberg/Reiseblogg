@@ -6,16 +6,12 @@ body {
     background-attachment: fixed;
 }
 
-#Header {
+#header {
     font-family: helvetica;
     text-transform: uppercase;
     font-weight: bold;
     color: #fa6121;
     text-align: center;
-}
-
-#allbutmain:hover {
-    overflow-y: auto;
 }
 
 #main {
@@ -25,13 +21,7 @@ body {
     overflow-y: visible;
     margin: 20px auto;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px 20px 20px 20px;
-}
-
-.mainpicture {
-    width: 100%;
-    margin: 7px auto;
-    display: block;
+    padding: 2px 20px 20px 20px;
 }
 
 #photo {
@@ -40,6 +30,11 @@ body {
     margin: 2px auto;
     margin-top: 10px;
     display: block;
+}
+
+.artpic {
+    max-width: 100%;
+    margin-bottom: 10px;
 }
 
 #maintext {
@@ -62,10 +57,6 @@ body {
 #navmenu li a, #navmenu li a:hover {
     color: #fa6121;
     text-decoration: none;
-}
-
-.articletitle {
-    margin-bottom: 20px;
 }
 
 
