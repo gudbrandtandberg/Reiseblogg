@@ -1,0 +1,27 @@
+.galleryphoto {
+    width: 100%;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mainmenu {
+    opacity: 1;
+}
+.mainmenu:hover {
+    opacity: 0.8;
+}
+.albumnavn {
+    color: white;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: calc(-50% - 20px);    
+}
+
+a.thumbnail:hover{
+    text-decoration:none;
+}
+
+

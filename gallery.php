@@ -12,7 +12,7 @@
 
 <head>
     <?php include("head.php"); ?>
-    <link rel="stylesheet" href="gallerystyle.css">
+    <link rel="stylesheet" href="css/gallerystyle.css">
 </head>
 
 <body>

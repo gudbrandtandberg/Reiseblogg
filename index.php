@@ -1,9 +1,25 @@
+<?php
+
+function velg($valgmuligheter) {
+ 
+ echo "<select>";
+
+      foreach ($valgmuligheter as $valg){
+            echo "<option>".$valg."</option>";
+      }
+			
+ echo "</select>";
+      
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
       
       <head>
             <?php include("head.php"); ?>
-            <link rel="stylesheet" href="indexstyle.css">
+            <link rel="stylesheet" href="css/indexstyle.css">
             <script type="text/javascript">
                   $(document).ready(function(){
                         $(".matbloggbody").hide();   
@@ -16,6 +32,13 @@
                               $(".matbloggbody").hide();
                             }
                         });
+                        
+                        //window.resize(function(){alert("resize");});
+                        var bodyWidth = $("body").width();
+                        var mainWidth = $("#main").width() + 30;
+                        var margin = (bodyWidth - mainWidth) / 2;
+                        $("#main").css({"margin-left": margin+"px"});
+                        
                   });
             </script>
       </head>
@@ -23,141 +46,45 @@
       <body>
             
         <!--    GALLERY-MAL   -->
-        <div id="blueimp-gallery-arabia" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
-          <!-- The container for the modal slides -->
-          <div class="slides"></div>
-          <!-- Controls for the borderless lightbox -->
-          <h3 class="title"></h3>
-          <a class="prev">‹</a>
-          <a class="next">›</a>
-          <a class="close">×</a>
-          <a class="play-pause"></a>
-          <ol class="indicator"></ol>
-          <!-- The modal dialog, which will be used to wrap the lightbox content -->
-          <div class="modal fade">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <button type="button" class="close" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title"></h4>
-                      </div>
-                      <div class="modal-body next"></div>
-                      <div class="modal-footer">
-                          <button type="button" class="btn btn-default pull-left prev">
-                              <i class="glyphicon glyphicon-chevron-left"></i>
-                              Previous
-                          </button>
-                          <button type="button" class="btn btn-primary next">
-                              Next
-                              <i class="glyphicon glyphicon-chevron-right"></i>
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div id="blueimp-gallery-thailandI" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
-          <!-- The container for the modal slides -->
-          <div class="slides"></div>
-          <!-- Controls for the borderless lightbox -->
-          <h3 class="title"></h3>
-          <a class="prev">‹</a>
-          <a class="next">›</a>
-          <a class="close">×</a>
-          <a class="play-pause"></a>
-          <ol class="indicator"></ol>
-          <!-- The modal dialog, which will be used to wrap the lightbox content -->
-          <div class="modal fade">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <button type="button" class="close" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title"></h4>
-                      </div>
-                      <div class="modal-body next"></div>
-                      <div class="modal-footer">
-                          <button type="button" class="btn btn-default pull-left prev">
-                              <i class="glyphicon glyphicon-chevron-left"></i>
-                              Previous
-                          </button>
-                          <button type="button" class="btn btn-primary next">
-                              Next
-                              <i class="glyphicon glyphicon-chevron-right"></i>
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        <div id="blueimp-gallery-arabia" class="blueimp-gallery">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
         </div>
         
-        <div id="blueimp-gallery-bali" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
-          <!-- The container for the modal slides -->
-          <div class="slides"></div>
-          <!-- Controls for the borderless lightbox -->
-          <h3 class="title"></h3>
-          <a class="prev">‹</a>
-          <a class="next">›</a>
-          <a class="close">×</a>
-          <a class="play-pause"></a>
-          <ol class="indicator"></ol>
-          <!-- The modal dialog, which will be used to wrap the lightbox content -->
-          <div class="modal fade">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <button type="button" class="close" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title"></h4>
-                      </div>
-                      <div class="modal-body next"></div>
-                      <div class="modal-footer">
-                          <button type="button" class="btn btn-default pull-left prev">
-                              <i class="glyphicon glyphicon-chevron-left"></i>
-                              Previous
-                          </button>
-                          <button type="button" class="btn btn-primary next">
-                              Next
-                              <i class="glyphicon glyphicon-chevron-right"></i>
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        <div id="blueimp-gallery-thailandI" class="blueimp-gallery">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
         </div>
         
-        <div id="blueimp-gallery-matblogg" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
-          <!-- The container for the modal slides -->
-          <div class="slides"></div>
-          <!-- Controls for the borderless lightbox -->
-          <h3 class="title"></h3>
-          <a class="prev">‹</a>
-          <a class="next">›</a>
-          <a class="close">×</a>
-          <a class="play-pause"></a>
-          <ol class="indicator"></ol>
-          <!-- The modal dialog, which will be used to wrap the lightbox content -->
-          <div class="modal fade">
-              <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <button type="button" class="close" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title"></h4>
-                      </div>
-                      <div class="modal-body next"></div>
-                      <div class="modal-footer">
-                          <button type="button" class="btn btn-default pull-left prev">
-                              <i class="glyphicon glyphicon-chevron-left"></i>
-                              Previous
-                          </button>
-                          <button type="button" class="btn btn-primary next">
-                              Next
-                              <i class="glyphicon glyphicon-chevron-right"></i>
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
+       <div id="blueimp-gallery-bali" class="blueimp-gallery">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
         </div>
-                
+        
+        <div id="blueimp-gallery-matblogg" class="blueimp-gallery">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
+        </div>
         
         <!--    HEADER    -->
         <div class="headerwrapper">
@@ -174,14 +101,80 @@
       
       
         <!--      HER BEGYNNER BLOGGEN     -->
-        <div id="main">
-          <!--   BALI        -->
+        <div class="col-md-8 col-xs-11" id="main">
           
           <?php //include("matblogg1.php"); ?>
           
+          <!--   BALI        -->
+          
           <h2>Bali</h2>
-          <!--<h3>On the road again</h3>-->
+          
+          <h3>Lovina</h3>
+          
+          <p>
+            Lovina is a <?= velg(["small", "lovey", "quaint"]); ?> fishing village on the north side of the island. Part of the reason for coming there were the <?= velg(["awesome", "legendary", "beautiful"]); ?> diving opportunities. Sarah had for some time been wanting to upgrade her diving licence, so we started asking around. Soon she struck a deal with a <?= velg(["great", "handsome", "blond", "balinese"]); ?> guy on the beach for the 'advanced diving' course, which, since the guy was so shocked we were living in our car, included two nights free accomodation at a <?= velg(["decent", "shabby"]); ?> hotel. 
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/lovinasol.jpg" data-gallery="#blueimp-gallery-bali" title="This sunset happened every night!">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/lovinasol.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <h4>Diving With Sarah</h4>
+          
+          <h4>Fishing With Gudbrand</h4>
+          
+          <p>
+            The first days while Sarah was out diving, I enjoyed slow mornings and afternoons of walking on the beach, talking to locals, practising yoga, and reading. But one thing I really wanted to experience was the local fishing. So after a quick talk to the son of a fisherman on the beach, I was all set to come along. We set out for the open sea in the morning dark at 5:30. The first hour of boating was dark, then gradually the sky started to change. As the sun rose with the waning full moon still high above and Venus bright in the east, the most magnificent colors appeared before me in the sky, changing every minute. T'was a breathtaking sight. 
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_2672.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_2672.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_2674.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_2674.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            After two hours we were far out and started to fish. No fish in the first spot. So we moved further out. Still no fish. But then, suddenly, I felt the familiar tug of the line and was overtaken by excitement. We had each hooked a fish, and we could see them frantically jumping out of the water at the end of the line. I did not land the first fish, but the fisherman did and it was a beautiful Mahi Mahi fish &mdash; <i>Gullmakrell</i> på norsk. Soon many more Mahi Mahi followed, and the next four hours we spent reeling them in. 
+          </p>
+          
+          <a href="bilder/bali/fiskefilm.MOV"
+                    title="Fisking"
+                    data-gallery="#blueimp-gallery-bali"
+                    type="video/quicktime"
+                    data-poster="bilder/bali/fisker.png"
+                    data-sources='[{"href": "bilder/bali/fiskefilm.MOV", "type": "video/quicktime"}]'>
+                  <img class="artpic" src="bilder/bali/fisker.png"/>
+          </a>
+          
+          <a href="bilder/bali/IMG_2675.jpg" data-gallery="#blueimp-gallery-bali"></a>
+          <a href="bilder/bali/IMG_2677.jpg" data-gallery="#blueimp-gallery-bali"></a>
+          <a href="bilder/bali/IMG_2679.jpg" data-gallery="#blueimp-gallery-bali"></a>
+          <a href="bilder/bali/IMG_2680.jpg" data-gallery="#blueimp-gallery-bali" title="The view back towards Bali"></a>
+          <a href="bilder/bali/IMG_2682.jpg" data-gallery="#blueimp-gallery-bali" title="Catch of the day. Around 30 fish"></a>
+          <a href="bilder/bali/IMG_2685.jpg" data-gallery="#blueimp-gallery-bali"></a>
+          <a href="bilder/bali/IMG_2687.jpg" data-gallery="#blueimp-gallery-bali"></a>
+          <a href="bilder/bali/IMG_2689.jpg" data-gallery="#blueimp-gallery-bali" title="Fishermans wife"></a>
+          
+          <p>
+            <small> *I, Gudbrand like to elaborate and use adjectives and creative wordings. Sarah prefers short and precise syntax. It is not always easy to cooperate. Jokingly, Sarah said to me: "why not write an adjective story instead!". I took her seriously. </small>
+          </p>
+          
           <h3>Balian Beach</h3>
+          
           <p>
             We left Seminyak in our rental car. Driving in Bali is quite an experience. Getting used to driving on the wrong side of the road was nothing, getting past the extreme awkwardness of signaling with the right hand and gear-shifting with the left was a bit challanging, but getting to grips with the driving culture most difficult of all. Roads consist of one lane in each direction, each lane about 3/4 the width of a car. This implies 'lane-sharing' which can be quite startling to say the least. Lots of mopeds, lots of slow moving wide trucks and lots of eager drivers makes for a chaotic experience. Honking your horn can mean anything &mdash; "Watch out here I come", "I'm going to overtake you", "Overtake me, please", "Be careful", "F*** you", "Hello!". After a practice drive to Sanur, we headed northwest for Balian Beach, a simple surfer community off the beaten path on the desolate west coast. There was nothing there but a small village, a couple of beach huts, sand and the sound of the waves. 
             
@@ -266,7 +259,7 @@
           
           <!--   BANGKOK I   -->
           
-          <h2>Bangkok<small> 24.8.2015</small></h2>
+          <h2>Bangkok</h2>
             <p>
               Finally we arived at our first stop in South East Asia - Bangkok. What a city! Streetlife, flashing neon, crowds of people, dirt, cars, food &mdash; oh the food! Our first stay lasted four wonderful days. We began by establishing our headquarters in Jørgen's stylish 23. floor apartment in downtown Bangkok, check out the awesome view from our bed!
             </p>
@@ -342,7 +335,7 @@
             </div>
           
           <!--    ARABIA    -->
-          <h2>Arabia <small>19.8.2015</small></h2>
+          <h2>Arabia</h2>
             <p>
               After a lovely farewell dinner with family and friends, we finally set off for the Arabian Peninsula.
               Our trip was a fine one, and we were very happy to finally be greeted by Nora and Steven at the airport.
@@ -474,6 +467,5 @@
         </div> <!-- end #main -->
       
       <script src="<?=$blueimp_jquery_js;?>"></script>
-      <script src="<?=$bootstrap_image_js;?>"></script>
   </body>      
 </html>

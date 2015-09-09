@@ -13,7 +13,7 @@
 
     <head>
         <?php include("head.php"); ?>
-        <link rel="stylesheet" href="mapstyle.css">
+        <link rel="stylesheet" href="css/mapstyle.css">
     </head>
     
     <body>
