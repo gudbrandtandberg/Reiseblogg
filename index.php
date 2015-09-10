@@ -1,27 +1,49 @@
 <?php
-
-function velg($valgmuligheter) {
- 
- echo "<select>";
-
-      foreach ($valgmuligheter as $valg){
-            echo "<option>".$valg."</option>";
-      }
-			
- echo "</select>";
+      function velg($valgmuligheter) {
+       echo "<select>";
       
-}
-
+            foreach ($valgmuligheter as $valg){
+                  echo "<option>".$valg."</option>";
+            }
+                              
+       echo "</select>";
+      }
+      
+      function galleri($navn) {
+            echo '<div id="blueimp-gallery-'.$navn.'" class="blueimp-gallery">
+                  <div class="slides"></div>
+                  <h3 class="title"></h3>
+                  <a class="prev">‹</a>
+                  <a class="next">›</a>
+                  <a class="close">×</a>
+                  <a class="play-pause"></a>
+                  <ol class="indicator"></ol>
+            </div>';
+      }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-      
       <head>
             <?php include("head.php"); ?>
             <link rel="stylesheet" href="css/indexstyle.css">
             <script type="text/javascript">
+                  
+                  function midtstill(){
+                        var bodyWidth = $("body").width();
+                        var mainWidth = $("#main").width() + 30;
+                        var margin = (bodyWidth - mainWidth) / 2;
+                        $("#main").css({"margin-left": margin+"px"});
+                  }
+                  
+                  function settHarTattHandling(){
+                        if (typeof(localStorage !== "undefined")) {
+                              localStorage.harTattHandling = true;
+                        }
+                  }
+                  
                   $(document).ready(function(){
+                        
                         $(".matbloggbody").hide();   
                         $(".matbloggknapp").click(function(){
                             if ($(".matbloggbody").is(":hidden")) {
@@ -33,74 +55,80 @@ function velg($valgmuligheter) {
                             }
                         });
                         
-                        //window.resize(function(){alert("resize");});
-                        var bodyWidth = $("body").width();
-                        var mainWidth = $("#main").width() + 30;
-                        var margin = (bodyWidth - mainWidth) / 2;
-                        $("#main").css({"margin-left": margin+"px"});
+                        $(window).resize(midtstill);
+                        midtstill();
+                        
+                        if (typeof(localStorage !== "undefined")) {
+                              if (!localStorage.harTattHandling) {
+                                  $("#usynlig").click();
+                              }
+                        }
+                        
+                        $("#submitemail").click(function(){
+                              settHarTattHandling();
+                              var email = $("#emailinput").val();
+                              $.ajax({url: "lagreepost.php?epost="+email});
+                              $("#usynlig").click();
+                        });
+                        
+                        $("#nothanks").click(function(){
+                              settHarTattHandling();
+                              $("#usynlig").click();   
+                        });
                         
                   });
             </script>
       </head>
       
-      <body>
-            
+      <body>      
+        
+        <button id="usynlig" style="display: none;" data-toggle="modal" data-target="#popup"></button>
+        
+        <div class="modal fade" id="popup">
+            <div class="modal-dialog">
+                  <div class="modal-content">
+                        <div class="modal-header">
+                              <h2>Mailinglist!</h2>
+                        </div>
+                        
+                        <div class="modal-body">
+                              <p>
+                                    Enter your email here to get notified about new blog posts
+                              </p>
+                              
+                              <input type="text" id="emailinput">
+                              
+                              <div style="text-align: right;">
+                                    <span id="nothanks">No thanks</span>
+                                    <button class="btn btn-success" id="submitemail">Submit</button>
+                              </div>
+                        </div>  
+                  </div>
+            </div>
+        </div>
+        
         <!--    GALLERY-MAL   -->
-        <div id="blueimp-gallery-arabia" class="blueimp-gallery">
-            <div class="slides"></div>
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="close">×</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
-        </div>
-        
-        <div id="blueimp-gallery-thailandI" class="blueimp-gallery">
-            <div class="slides"></div>
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="close">×</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
-        </div>
-        
-       <div id="blueimp-gallery-bali" class="blueimp-gallery">
-            <div class="slides"></div>
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="close">×</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
-        </div>
-        
-        <div id="blueimp-gallery-matblogg" class="blueimp-gallery">
-            <div class="slides"></div>
-            <h3 class="title"></h3>
-            <a class="prev">‹</a>
-            <a class="next">›</a>
-            <a class="close">×</a>
-            <a class="play-pause"></a>
-            <ol class="indicator"></ol>
-        </div>
+        <?= galleri("arabia"); ?>
+        <?= galleri("thailandI"); ?>
+        <?= galleri("bali"); ?>
+        <?= galleri("matblogg"); ?>
         
         <!--    HEADER    -->
-        <div class="headerwrapper">
+        <div class="container">
+          
           <img id="photo" src="bilder/diverse/sogg.jpg">
           
           <h1 id="header">Gudbrand &amp; Sarah's travelblog</h1>
-           
-          <div>
-            <p id="maintext"> We are traveling through South-East Asia for 10 months. Follow our journey here.</p>
-          </div>
+          
+          <p id="maintext">We are traveling through South-East Asia for 10 months. Follow our journey here.</p>
           
           <?php include("navmeny.php"); ?>
+        
         </div>
       
       
         <!--      HER BEGYNNER BLOGGEN     -->
+        
         <div class="col-md-8 col-xs-11" id="main">
           
           <?php //include("matblogg1.php"); ?>
@@ -108,6 +136,8 @@ function velg($valgmuligheter) {
           <!--   BALI        -->
           
           <h2>Bali</h2>
+          
+          <h3>The Road to Ubud</h3>
           
           <h3>Lovina</h3>
           
@@ -123,12 +153,54 @@ function velg($valgmuligheter) {
             </a>
           </div>
           
+          <p>
+            <small> *I, Gudbrand like to elaborate and use adjectives and creative wordings. Sarah prefers short and precise syntax. It is not always easy to cooperate. Jokingly, Sarah said to me: "why not write an adjective story instead!". I took her seriously. </small>
+          </p>
+          
           <h4>Diving With Sarah</h4>
+          <p>
+            My main motive for coming to Lovina was to get a chance to dive again, having read some where that Lovina was one of the best spots for this kind of activity. It turned out this wasn't entirely true but it did lay inbetween two other great diving spots on the north east and north west side of Bali wich was just as fine. I signed up for a Padi Advanced Diving course, expecting that I would get several more diving opportunities on our travels. Over the next two days I completed five dives: bouyancy control, navigation, wreck dive, deep dive and a night dive.
+          </p>
+          <p>  
+            The spot for my first two dives was Menjangan Island. A national park on the north east tip of Bali just a stone throw away from Java. It was a long time since my last dive and I was a little nervous pulling on my wetsuit and prepering the equipment. My french dive instructor Arnold repeated some safety routines with me and as soon as we jumped into the water and went down under the surface all nerves dissappeared and I was exhilarated by the vast space of colorful corals and curious fish.
+          </p>
+          <p>
+            In addition to diving around in these surroundings I had to complete some exercises. The more amusing ones were floating controlled upside down, and sitting in Lotus position breathing myself up and down in the water without touching either the sand or the surface.
+          </p>
+          
+          <div class="row">
+            <a href="bilder/diverse/klovn.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6">
+                <img class="artpic" src="bilder/diverse/klovn.jpg" />
+              </div>
+            </a>
+            <a href="bilder/diverse/korall.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6">
+                <img class="artpic" src="bilder/diverse/korall.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            The second day of diving was quite intense, but also the most thrilling. We drove two hours westwards to Tulamben to do the deep dive (30m) and a wreck dive. This dive site is the most spectacular one in Bali. About 20m from shore lies a wreck 100m long. The ship, USAT Liberty, was a United States Army cargo ship torpedoed by a Japanese submarine in 1942. Most of the ship was taken over by the sea and the most beautiful corals and fish that I could imagine thrived on this now sunken paradise. There were tuna mating, sea horses, turtles, octopus, clown fish, eels, sting ray and many many more incredible sea creatures. 
+          </p>
+          
+          <div class="row">
+            <a href="bilder/diverse/vrak.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/diverse/vrak.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            Later that day it was time for the night dive. This happened at a coral reef just outside of Lovina Beach. We went out in a local fishing boat just after dark. There wasn't really that much to see under water but the odd feeling of diving surrounded by the dark was worth the while. With nothing to see but pitch black except from where the flashlight showed the way was suprisingly relaxing. No dizzines from trying to take in all the impressions around me. It was just us and the sleeping ocean. The most amazing part was perhaps when we reached the surface, filled our BCDs, leaned back and looked at the clear starry sky waiting for the boat to pick us up.
+          </p>
           
           <h4>Fishing With Gudbrand</h4>
           
           <p>
-            The first days while Sarah was out diving, I enjoyed slow mornings and afternoons of walking on the beach, talking to locals, practising yoga, and reading. But one thing I really wanted to experience was the local fishing. So after a quick talk to the son of a fisherman on the beach, I was all set to come along. We set out for the open sea in the morning dark at 5:30. The first hour of boating was dark, then gradually the sky started to change. As the sun rose with the waning full moon still high above and Venus bright in the east, the most magnificent colors appeared before me in the sky, changing every minute. T'was a breathtaking sight. 
+            The first days while Sarah was out diving, I enjoyed slow mornings and afternoons of walking on the beach, talking to locals, practising yoga, and reading. But one thing I really wanted to experience was the local fishing. So after a quick talk to the son of a fisherman, we agreed on a fair price and I was all set to come along. We set out for the open sea in the morning dark. The first hour of boating was dark, then gradually the sky started to change. As the sun rose and the waning full moon still high above and Venus bright in the east, the most magnificent colors spread accross the sky, changing every minute from dark, orange, golden, blue and pink. T'was a breathtaking sight. 
           </p>
           
           <div class="row">
@@ -139,6 +211,10 @@ function velg($valgmuligheter) {
             </a>
           </div>
           
+          <p>
+            The boat was a traditional narrow, long <i>jukung</i> with spiderlike outriggers protruding from both sides.
+          </p>
+          
           <div class="row">
             <a href="bilder/bali/IMG_2674.jpg" data-gallery="#blueimp-gallery-bali">
               <div class="col-sm-12">
@@ -148,15 +224,15 @@ function velg($valgmuligheter) {
           </div>
           
           <p>
-            After two hours we were far out and started to fish. No fish in the first spot. So we moved further out. Still no fish. But then, suddenly, I felt the familiar tug of the line and was overtaken by excitement. We had each hooked a fish, and we could see them frantically jumping out of the water at the end of the line. I did not land the first fish, but the fisherman did and it was a beautiful Mahi Mahi fish &mdash; <i>Gullmakrell</i> på norsk. Soon many more Mahi Mahi followed, and the next four hours we spent reeling them in. 
+            After two hours we were far out and started to fish. We caught no fish in the first spot. We moved further out. Still no fish. But then, suddenly, I felt the familiar tug of the line and was overtaken by excitement. We had each hooked a fish, and we could see them frantically jumping in the distance. I did not land the first fish, but the fisherman did and it was a beautiful <i>Mahi Mahi</i> &mdash; <i>Gullmakrell</i> på norsk. Soon many more Mahi Mahi followed, and the next four hours we spent reeling them in. 
           </p>
           
-          <a href="bilder/bali/fiskefilm.MOV"
+          <a href="bilder/diverse/fiskefilm.mp4"
                     title="Fisking"
                     data-gallery="#blueimp-gallery-bali"
-                    type="video/quicktime"
+                    type="video/mp4"
                     data-poster="bilder/bali/fisker.png"
-                    data-sources='[{"href": "bilder/bali/fiskefilm.MOV", "type": "video/quicktime"}]'>
+                    data-sources='[{"href": "bilder/diverse/fiskefilm.mp4", "type": "video/mp4"}]'>
                   <img class="artpic" src="bilder/bali/fisker.png"/>
           </a>
           
@@ -170,7 +246,7 @@ function velg($valgmuligheter) {
           <a href="bilder/bali/IMG_2689.jpg" data-gallery="#blueimp-gallery-bali" title="Fishermans wife"></a>
           
           <p>
-            <small> *I, Gudbrand like to elaborate and use adjectives and creative wordings. Sarah prefers short and precise syntax. It is not always easy to cooperate. Jokingly, Sarah said to me: "why not write an adjective story instead!". I took her seriously. </small>
+            Later in the evening we ate dinner at the fisherman's house. The grilled Mahi Mahi tasted sublime, served with steamed rice and a <i>sambal</i> of chillies and coconut oil. We got to talk to the fishermans wife and play with their four puppies. Click the smiling fisherman for a video (sorry, it's upside down - flip your screen or stand on your head) and some more photos. Also, at any time press enter or click an image to toggle the controls. 
           </p>
           
           <h3>Balian Beach</h3>

@@ -54,3 +54,26 @@ body {
     width: 106%;
     width: calc(100% + 30px);
 }
+
+.newsletterpopup {
+    margin-top: 15px;
+}
+
+#emailinput {
+    font-size: 1.5em;
+    height: 34px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+.btn {
+    margin-top: 15px;
+}
+#nothanks {
+    position: relative;
+    top: 10px;
+    margin-right: 15px;
+}
+#nothanks:hover {
+    cursor: pointer;
+}

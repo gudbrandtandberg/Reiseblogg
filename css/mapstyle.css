@@ -4,6 +4,23 @@
     position: relative;
 }
 
+.progresstable {
+    width:100%;
+    margin-bottom: -5px;
+}
+
+.date {
+    width: 20%;
+}
+.left-date {
+    text-align: right;
+}
+.aug {
+    margin-right: 20px;
+}
+.jun {
+    margin-left: 20px;
+}
 td {
     vertical-align: top;
 }

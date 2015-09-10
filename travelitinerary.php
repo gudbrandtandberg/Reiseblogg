@@ -23,22 +23,22 @@
         <?php include("navmeny.php"); ?>
         
         <div class="row">
-            <table style="width:100%; margin-bottom: -5px; margin-top: 0px;">
+            <table class="progresstable">
                     <tr>
-                        <td style="width:20%; text-align: right;">
-                            <span style="margin-right: 20px;">August 2015</span>
+                        <td class="date left-date">
+                            <span class="aug">August 2015</span>
                         </td>
                     
-                        <td style="width:<?=$progress;?>%">
+                        <td style="width:<?php printf("%.1f", $progress);?>%">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="<?=$progress;?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$progress;?>%;">
-                                  <span class="sr-only"><?=$progress;?>% Complete</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="<?php printf("%.1f", $progress);?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php printf("%.1f", $progress);?>%;">
+                                  <?php printf("%.1f", $progress);?>%
                                 </div>
                             </div>
                         </td>
                     
-                        <td style="width:20%">
-                            <span style="margin-left: 20px;">June 2016</span>
+                        <td class="date">
+                            <span class="jun">June 2016</span>
                         </td>
                     </tr>
             </table>
