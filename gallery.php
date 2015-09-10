@@ -32,6 +32,7 @@
         
         <?php include("navmeny.php"); ?>
         
+
         <div class="container">
             <?php
                 //$bilder skal være sortert! funker sånn ca..

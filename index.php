@@ -335,7 +335,9 @@
           
           <!--   BANGKOK I   -->
           
+
           <h2>Bangkok</h2>
+
             <p>
               Finally we arived at our first stop in South East Asia - Bangkok. What a city! Streetlife, flashing neon, crowds of people, dirt, cars, food &mdash; oh the food! Our first stay lasted four wonderful days. We began by establishing our headquarters in Jørgen's stylish 23. floor apartment in downtown Bangkok, check out the awesome view from our bed!
             </p>
@@ -370,9 +372,15 @@
                 <img class="artpic" src="bilder/thailand/vors.jpg" />
               </div>
               </a>
+<<<<<<< HEAD
+              <a href="bilder/thailand/hore.jpg" data-gallery="#blueimp-gallery-thailandI">
+              <div class="col-sm-6">
+                <img class="artpic" src="bilder/thailand/hore.jpg" />
+=======
               <a href="bilder/thailand/street.jpg" data-gallery="#blueimp-gallery-thailandI">
               <div class="col-sm-6">
                 <img class="artpic" src="bilder/thailand/street.jpg" />
+>>>>>>> 0a688314f82ffad3abe68263f75547ffb82314a7
               </div>
               </a>
             </div>
@@ -542,6 +550,7 @@
           
         </div> <!-- end #main -->
       
+
       <script src="<?=$blueimp_jquery_js;?>"></script>
   </body>      
 </html>
