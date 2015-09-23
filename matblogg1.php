@@ -1,4 +1,4 @@
-<br>
+
 <div class="matbloggcover col-sm-12">
     <img class="matbloggbilde" src="bilder/matblogg/IMG_2509.JPG"/>
     <span class="matbloggtittel">GOOZY'S FOODBLOG</span>

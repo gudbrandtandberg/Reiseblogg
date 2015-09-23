@@ -135,14 +135,112 @@
           
           <!--   BALI        -->
           
-          <h2>Bali</h2>
+          <h2>Indonesia</h2>
+          
+          <!--<h3>Mount Rinjani</h3>
+          
+          <h3>Gili Islands</h3>
+          
+          Padangbai m/ bilde <br>
+          Fergeankomst med bilde <br>
+          Nevne kjøretur <br>
+          Bilde av Gili T. <br>
+          Bildesekvens Gili T. +tekst (+tur) <br>
+          Over til Meno <br>
+          Meno Bilder <br>-->
+          
+          <!--<p>
+            
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            
+          </p>-->
           
           <h3>The Road to Ubud</h3>
+          
+          <p>
+            Our next journey went from Lovina, over the mountainous centre and down into the lowland town of Ubud. The first <i>sehenswürdigkeit</i> on the way was the Gitgit waterfall. We took a dip in the fresh, cold mountain water.
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_8308.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_8308.JPG" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            Just having passed the hightest point of our ascent, we stopped to have a look at the map. We were greeted by a cheeky monkey, with whom Gudbrand had a moment. 
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_8328.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 venstre">
+                <img class="artpic" src="bilder/bali/IMG_8328.JPG" />
+              </div>
+            </a>
+            <a href="bilder/bali/IMG_8329.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 hoyre">
+                <img class="artpic" src="bilder/bali/IMG_8329.JPG" />
+              </div>
+            </a>
+          </div>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_8331.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 venstre">
+                <img class="artpic" src="bilder/bali/IMG_8331.JPG" />
+              </div>
+            </a>
+            <a href="bilder/bali/IMG_8333.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 hoyre">
+                <img class="artpic" src="bilder/bali/IMG_8333.JPG" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            After enough driving for the day, we parked our car in the village between the clouds &mdash; Bedugul. Here there was a lake and a great market with lots of local strawberries and other delicious treats. More photos from along the way in the Gallery, as usual.
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_8339.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_8339.JPG" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            Next day we made our way to Ubud in the early morning. Ubud is known as the cultural and spiritual centre of Bali. Lots of wood carving, statues, batik, temples, museums, dance etc. It is also the destination of Julia Roberts in the film <i>Eat, Pray, Love</i>. Our story would be called <i>Eat, Sleep, Love</i>. 
+          </p>
+          
+          <p>
+            We lived in a small outhouse of a typical Balinese stately home, very close to Ubud Palace and the city centre. We ate lots of really good food, thanks to a map of nice food places Nora had given us before we came. The best spot was without doubt Sari Organik &mdash; tucked away inbetween rice paddies and lush farmland we enjoyed a good lunch finished off with a large glass of homemade organic white wine.
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_2590.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_2590.JPG" />
+              </div>
+            </a>
+          </div>
           
           <h3>Lovina</h3>
           
           <p>
-            Lovina is a <?= velg(["small", "lovey", "quaint"]); ?> fishing village on the north side of the island. Part of the reason for coming there were the <?= velg(["awesome", "legendary", "beautiful"]); ?> diving opportunities. Sarah had for some time been wanting to upgrade her diving licence, so we started asking around. Soon she struck a deal with a <?= velg(["great", "handsome", "blond", "balinese"]); ?> guy on the beach for the 'advanced diving' course, which, since the guy was so shocked we were living in our car, included two nights free accomodation at a <?= velg(["decent", "shabby"]); ?> hotel. 
+            Lovina is a <?= velg(["small", "lovely", "quaint"]); ?> fishing village on the north side of the island. Part of the reason for coming there were the <?= velg(["awesome", "legendary", "beautiful"]); ?> diving opportunities. Sarah had for some time been wanting to upgrade her diving licence, so we started asking around. Soon she struck a deal with a <?= velg(["great", "handsome", "blond", "balinese"]); ?> guy on the beach for the 'advanced diving' course, which, since the guy was so shocked we were living in our car, included two nights free accomodation at a <?= velg(["decent", "shabby"]); ?> hotel. 
           </p>
           
           <div class="row">
@@ -170,12 +268,12 @@
           
           <div class="row">
             <a href="bilder/diverse/klovn.jpg" data-gallery="#blueimp-gallery-bali">
-              <div class="col-sm-6">
+              <div class="col-sm-6 venstre">
                 <img class="artpic" src="bilder/diverse/klovn.jpg" />
               </div>
             </a>
             <a href="bilder/diverse/korall.jpg" data-gallery="#blueimp-gallery-bali">
-              <div class="col-sm-6">
+              <div class="col-sm-6 hoyre">
                 <img class="artpic" src="bilder/diverse/korall.jpg" />
               </div>
             </a>
@@ -306,12 +404,12 @@
           
           <div class="row">
             <a href="bilder/bali/gul.jpg" data-gallery="#blueimp-gallery-bali">
-              <div class="col-sm-6">
+              <div class="col-sm-6 venstre">
                 <img class="artpic" src="bilder/bali/gul.jpg" />
               </div>
             </a>
             <a href="bilder/bali/kveld.JPG" data-gallery="#blueimp-gallery-bali">
-              <div class="col-sm-6">
+              <div class="col-sm-6 hoyre">
                 <img class="artpic" src="bilder/bali/kveld.JPG" />
               </div>
             </a>
@@ -343,12 +441,12 @@
             </p>
             <div class="row">
               <a href="bilder/thailand/dag.jpg" data-gallery="#blueimp-gallery-thailandI">
-              <div class="col-sm-6">
+              <div class="col-sm-6 venstre">
                 <img class="artpic" src="bilder/thailand/dag.jpg" />
               </div>
               </a>
               <a href="bilder/thailand/natt.jpg" data-gallery="#blueimp-gallery-thailandI">
-              <div class="col-sm-6">
+              <div class="col-sm-6 hoyre">
                 <img class="artpic" src="bilder/thailand/natt.jpg" />
               </div>
               </a>
@@ -363,35 +461,33 @@
               </div>
               </a>
             </div>
+            
             <p>
               Of course we had to check out the notorious nightlife of Bangkok and it did not dissapoint! We had a cozy little 'vors' accompanied by the classic <a href="https://www.youtube.com/watch?v=R9cNtrrCP0E">One Night in Bangkok</a> before hitting the bars. Can you spot Sarah in these pictures?
             </p>
+            
             <div class="row">
               <a href="bilder/thailand/vors.jpg" data-gallery="#blueimp-gallery-thailandI">
-              <div class="col-sm-6">
+              <div class="col-sm-6 venstre">
                 <img class="artpic" src="bilder/thailand/vors.jpg" />
               </div>
               </a>
-<<<<<<< HEAD
-              <a href="bilder/thailand/hore.jpg" data-gallery="#blueimp-gallery-thailandI">
-              <div class="col-sm-6">
-                <img class="artpic" src="bilder/thailand/hore.jpg" />
-=======
+
               <a href="bilder/thailand/street.jpg" data-gallery="#blueimp-gallery-thailandI">
-              <div class="col-sm-6">
+              <div class="col-sm-6 hoyre">
                 <img class="artpic" src="bilder/thailand/street.jpg" />
->>>>>>> 0a688314f82ffad3abe68263f75547ffb82314a7
               </div>
               </a>
             </div>
+            
             <div class="row">
               <a href="bilder/thailand/gate.jpg" data-gallery="#blueimp-gallery-thailandI">
-              <div class="col-sm-6">
+              <div class="col-sm-6 venstre">
                 <img class="artpic" src="bilder/thailand/gate.jpg" />
               </div>
               </a>
               <a href="bilder/thailand/tiss.jpg" data-gallery="#blueimp-gallery-thailandI">
-              <div class="col-sm-6">
+              <div class="col-sm-6 hoyre">
                 <img class="artpic" src="bilder/thailand/tiss.jpg" />
               </div>
               </a>
@@ -402,17 +498,17 @@
               </p>
             <div class="row">
               <a href="bilder/thailand/budda.jpg" data-gallery="#blueimp-gallery-thailandI">
-              <div class="col-sm-4">
+              <div class="col-sm-4 venstre">
                 <img class="artpic" src="bilder/thailand/budda.jpg" />
               </div>
               </a>
               <a href="bilder/thailand/spiss.jpg" data-gallery="#blueimp-gallery-thailandI">
-              <div class="col-sm-4">
+              <div class="col-sm-4 venstreoghoyre">
                 <img class="artpic" src="bilder/thailand/spiss.jpg" />
               </div>
               </a>
               <a href="bilder/thailand/nonstop.jpg" data-gallery="#blueimp-gallery-thailandI">
-              <div class="col-sm-4">
+              <div class="col-sm-4 hoyre">
                 <img class="artpic" src="bilder/thailand/nonstop.jpg" />
               </div>
               </a>
@@ -460,11 +556,11 @@
             
             <div class="row">
               <a href="bilder/arabia/IMG_8049.JPG" data-gallery="#blueimp-gallery-arabia">
-                <div class="col-sm-6">
+                <div class="col-sm-6 venstre">
                   <img class="artpic" src="bilder/arabia/IMG_8049.JPG" />
                 </div>
               </a>
-              <div class="col-sm-6">
+              <div class="col-sm-6 hoyre">
                 <img class="artpic" src="bilder/diverse/tatooine.jpg" />
               </div>
             </div>

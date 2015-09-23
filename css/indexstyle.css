@@ -15,6 +15,10 @@ body {
 #maintext {
     text-align: center;
 }
+h2 {
+    margin-top: 15px;
+}
+
 #main {
     display: inline-block;
     border-radius: 5px;
@@ -22,6 +26,16 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+.venstre {
+    padding-right: 5px;
+}
+.hoyre {
+    padding-left: 5px;
+}
+.venstreoghoyre {
+    padding-right: 5px;
+    padding-left: 5px;
+}
 .artpic {
     max-width: 100%;
     margin-bottom: 10px;
@@ -31,6 +45,7 @@ body {
 .matbloggcover {
     position: relative;
     margin-bottom: 10px;
+    margin-top: 15px;
 }
 .matbloggtittel {
     font-weight: bold;
@@ -77,3 +92,4 @@ body {
 #nothanks:hover {
     cursor: pointer;
 }
+
