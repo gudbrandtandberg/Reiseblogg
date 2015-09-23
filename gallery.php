@@ -3,6 +3,7 @@
         $mappe = "bilder/".$_GET["album"];
     } else {
         $mappe = "bilder/";
+        $albums = Array("bali" => "IMG_2675.jpg", "thailand" => "gate.jpg", "arabia" => "IMG_8045.JPG");
     }
     
 ?>
@@ -16,7 +17,7 @@
     
     <body>
         
-        <div id="blueimp-gallery" class="blueimp-gallery">   
+        <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">   
             <!-- The container for the modal slides -->
             <div class="slides"></div>
             <!-- Controls for the borderless lightbox -->
@@ -31,32 +32,11 @@
         <h1 id="header"> Gallery </h1>
         
         <?php include("navmeny.php"); ?>
-        
 
         <div class="container">
-            <?php
-                //$bilder skal være sortert! funker sånn ca..
-                $bilder = array();
-                $it = new DirectoryIterator($mappe);
-                $it->rewind();
-                while ($it->valid()) { 
-                    $bilder[$it->getFilename()] = $it->getCTime(); 
-                    $it->next();
-                }
-            
-                arsort($bilder);
-                $bilder = array_keys($bilder);
-            ?>
             
             <?php if ($mappe == "bilder/") : ?>
-            
-                 <?php foreach ($bilder as $albumnavn): ?>
-                    <?php if ($albumnavn[0] == "." || $albumnavn == "diverse" || $albumnavn == "matblogg" || $albumnavn == "balikultur") continue;?>
-                    
-                    <?php
-                        $bildene = scandir($mappe.$albumnavn);
-                        $coverbilde = $bildene[5];
-                    ?>
+                <?php foreach ($albums as $albumnavn => $coverbilde): ?>
                     
                     <div class="col-sm-3" >
                         <a href="gallery.php?album=<?=$albumnavn;?>" class="thumbnail">
@@ -68,21 +48,24 @@
                     
                 <?php endforeach ?>
             
-            <?php else: ?>
-            
-                <?php foreach ($bilder as $albumnavn): ?>
-                    <?php if ($albumnavn[0] == ".") continue;?>
+            <?php else: //skal vise frem bildene i $albumnavn ?> 
+                <?php
+                    $bildeinfo = json_decode(file_get_contents("bildelister/".$_GET["album"]."bilder.json"));
+                    //asort($bildeinfo);
+                ?>
+                <?php foreach ($bildeinfo as $bildenavn => $bildetittel): ?>
                     
                     <div class="col-sm-3">
-                        <a href="<?= $mappe."/".$albumnavn; ?>" class="thumbnail" data-gallery>
-                            <div class="galleryphoto" style="background-image: url('<?= $mappe."/".$albumnavn; ?>');"></div>
+                        <a href="<?= $mappe."/".$bildenavn; ?>" class="thumbnail" data-gallery title="<?=$bildetittel;?>">
+                            <div class="galleryphoto" style="background-image: url('<?= $mappe."/".$bildenavn; ?>');"></div>
                         </a>
                     </div>           
                     
                 <?php endforeach ?>
             <?php endif; ?>
         </div>
-     
+        
+        <script src="<?=$blueimp_js;?>"></script>
         <script src="<?=$blueimp_jquery_js;?>"></script>
     </body>   
 </html>
