@@ -22,3 +22,26 @@
     color: #fa6121;
     text-decoration: none;
 }
+
+.blueimp-gallery .title {
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    bottom: 15px;
+    text-align: center;
+}
+.blueimp-gallery .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.blueimp-gallery ol.indicator {
+    display: none;
+}

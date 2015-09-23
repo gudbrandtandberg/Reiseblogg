@@ -5,7 +5,8 @@
         $bootstrap_js = "js/bootstrap.min.js";
         $jquery = "js/jquery-1.11.1.min.js";
         $blueimp_css = "css/blueimp-gallery.min.css";
-        $blueimp_jquery_js = "js/jquery.blueimp-gallery.min.js";
+        $blueimp_jquery_js = "js/jquery.blueimp-gallery.js";
+        $blueimp_js = "js/blueimp-gallery.js";
         
     } else {
         $bootstrap_css = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css";

@@ -10,7 +10,7 @@
       }
       
       function galleri($navn) {
-            echo '<div id="blueimp-gallery-'.$navn.'" class="blueimp-gallery">
+            echo '<div id="blueimp-gallery-'.$navn.'" class="blueimp-gallery blueimp-gallery-controls">
                   <div class="slides"></div>
                   <h3 class="title"></h3>
                   <a class="prev">‹</a>
@@ -647,6 +647,7 @@
         </div> <!-- end #main -->
       
 
+      <script src="<?=$blueimp_js;?>"></script>
       <script src="<?=$blueimp_jquery_js;?>"></script>
   </body>      
 </html>
