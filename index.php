@@ -137,33 +137,84 @@
           
           <h2>Indonesia</h2>
           
-          <!--<h3>Mount Rinjani</h3>
+          <!--<h3>Mount Rinjani</h3>-->
           
           <h3>Gili Islands</h3>
           
-          Padangbai m/ bilde <br>
-          Fergeankomst med bilde <br>
-          Nevne kjøretur <br>
-          Bilde av Gili T. <br>
-          Bildesekvens Gili T. +tekst (+tur) <br>
-          Over til Meno <br>
-          Meno Bilder <br>-->
-          
-          <!--<p>
-            
+          <p>
+            When we last visited Bali in 2012 we spent a few days on the beautiful Gili Islands, just outside of Lombok. We liked it there so much that we promised each other that we one day would return. That day came faster than we had anticipated, for just after getting enough food and rest in Ubud, we decided to head over to the Gili's. We spent one night in the transit town of Padangbai (where we found a stunning white sand beach all to ourselves and Gudbrand had the swim of his life) before taking the ferry over to Lembar, Lombok, shuttle bus to Bangsal harbour and finally boat over to the paradise island of Gili Trawangan (the one to the left). 
           </p>
           
           <div class="row">
-            <a href="bilder/bali/" data-gallery="#blueimp-gallery-bali">
+            <a href="bilder/diverse/gili.jpg" data-gallery="#blueimp-gallery-bali">
               <div class="col-sm-12">
-                <img class="artpic" src="bilder/bali/" />
+                <img class="artpic" src="bilder/diverse/gili.jpg" />
               </div>
             </a>
           </div>
           
           <p>
-            
-          </p>-->
+            Each of the Gili's has their own unique personality, and Trawangan is by far the "party island" of the three. Nonetheless, it is not hard to avoid the party crowd and do your own thing, which is what we mostly did. We spent our days snorkeling (fantastic corals teeming with ocean life), swimming, going for walks, drinking magic shakes and eating delicious food, notably fresh grilled fish.  
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_2293.jpeg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 venstre">
+                <img class="artpic" src="bilder/bali/IMG_2293.jpeg" />
+              </div>
+            </a>
+            <a href="bilder/bali/IMG_2302.jpeg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 hoyre">
+                <img class="artpic" src="bilder/bali/IMG_2302.jpeg" />
+              </div>
+            </a>
+          </div>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_2690.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 venstre">
+                <img class="artpic" src="bilder/bali/IMG_2690.JPG" />
+              </div>
+            </a>
+            <a href="bilder/bali/IMG_2668.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 hoyre">
+                <img class="artpic" src="bilder/bali/IMG_2668.JPG" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            After three nights on Gili T. we stumbled upon an ad for a newly started eco hostel at Gili Meno (the one in the middle), so we decided to go. As soon as we arrived we knew we had come to the right place. Quiet, peaceful, and most importantly without the busy streetlife of Gili T. The hostel was great; we slept in hammocks suspended from a three story bamboo structure, got to make our own pancakes for breakfast, played lots of games and met some nice people. 
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/gmeh2.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 venstre">
+                <img class="artpic" src="bilder/bali/gmeh2.jpg" />
+              </div>
+            </a>
+            <a href="bilder/bali/gmeh.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 hoyre">
+                <img class="artpic" src="bilder/bali/gmeh.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            After two nights in hammocks, we relocated to the other side of the island to a beach bungalow neighbouring the dive center where Sarah would spend the rest of our time in Meno diving. One night dive, one wreck dive and two deep water dives, all wonderful. We also met and spent time with some very nice fellow divers who convinced Gudbrand that it's about time he got his divers licence. We'll see..
+          </p>
+          
+          <p>
+            We really had a great time at the Gili's (the final Gili &mdash; Gili Air &mdash; will have to wait till next time), and we're so happy we came back. That's it for this post, but stay tuned for a very exciting new post during the next few days!
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_2704.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_2704.jpg" />
+              </div>
+            </a>
+          </div>
           
           <h3>The Road to Ubud</h3>
           
