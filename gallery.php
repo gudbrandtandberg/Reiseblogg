@@ -1,8 +1,10 @@
 <?php
     if (isset($_GET["album"])){
-        $mappe = "bilder/".$_GET["album"];
+        $albumvalgt = true;
+        $album = $_GET["album"];
+        $bildeinfo = json_decode(file_get_contents("bildelister/".$album."bilder.json"));
     } else {
-        $mappe = "bilder/";
+        $albumvalgt = false;
         $albums = Array("bali" => "IMG_2675.jpg", "thailand" => "gate.jpg", "arabia" => "IMG_8045.JPG");
     }
     
@@ -35,12 +37,12 @@
 
         <div class="container">
             
-            <?php if ($mappe == "bilder/") : ?>
+            <?php if (!$albumvalgt) : ?>
                 <?php foreach ($albums as $albumnavn => $coverbilde): ?>
                     
                     <div class="col-sm-3" >
                         <a href="gallery.php?album=<?=$albumnavn;?>" class="thumbnail">
-                            <div class="galleryphoto mainmenu" style="background-image: url('<?= $mappe.$albumnavn."/".$coverbilde; ?>');">
+                            <div class="galleryphoto mainmenu" style="background-image: url('<?= "bilder/".$albumnavn."/".$coverbilde; ?>');">
                                 <span class="albumnavn"> <?=$albumnavn;?> </span>
                             </div>
                         </a>
@@ -49,15 +51,11 @@
                 <?php endforeach ?>
             
             <?php else: //skal vise frem bildene i $albumnavn ?> 
-                <?php
-                    $bildeinfo = json_decode(file_get_contents("bildelister/".$_GET["album"]."bilder.json"));
-                    //asort($bildeinfo);
-                ?>
                 <?php foreach ($bildeinfo as $bildenavn => $bildetittel): ?>
                     
                     <div class="col-sm-3">
-                        <a href="<?= $mappe."/".$bildenavn; ?>" class="thumbnail" data-gallery title="<?=$bildetittel;?>">
-                            <div class="galleryphoto" style="background-image: url('<?= $mappe."/".$bildenavn; ?>');"></div>
+                        <a href="<?= "bilder/".$album."/".$bildenavn; ?>" class="thumbnail" data-gallery title="<?=$bildetittel;?>">
+                            <div class="galleryphoto" style="background-image: url('<?= "bilder/".$album."/".$bildenavn; ?>');"></div>
                         </a>
                     </div>           
                     

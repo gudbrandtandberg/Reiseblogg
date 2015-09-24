@@ -37,6 +37,7 @@ h2 {
     padding-left: 5px;
 }
 .artpic {
+    width: 100%;
     max-width: 100%;
     margin-bottom: 10px;
 }
