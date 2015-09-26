@@ -29,13 +29,6 @@
             <link rel="stylesheet" href="css/indexstyle.css">
             <script type="text/javascript">
                   
-                  function midtstill(){
-                        var bodyWidth = $("body").width();
-                        var mainWidth = $("#main").width() + 30;
-                        var margin = (bodyWidth - mainWidth) / 2;
-                        $("#main").css({"margin-left": margin+"px"});
-                  }
-                  
                   function settHarTattHandling(){
                         if (typeof(localStorage !== "undefined")) {
                               localStorage.harTattHandling = true;
@@ -44,19 +37,23 @@
                   
                   $(document).ready(function(){
                         
-                        $(".matbloggbody").hide();   
-                        $(".matbloggknapp").click(function(){
-                            if ($(".matbloggbody").is(":hidden")) {
-                              $(".matbloggknapp").html("Read less");
-                              $(".matbloggbody").show();
+                        $("#matbloggbody").hide();
+                        $("#balikulturbody").hide();
+                        
+                        $(".featureknapp").click(function(e){
+                            
+                            var id = $(this).attr("toggle");
+                            var knapp = $("#"+id+"knapp");
+                            
+                            if (knapp.html() == "Read more") {
+                              knapp.html("Read less");
                             } else {
-                              $(".matbloggknapp").html("Read more");
-                              $(".matbloggbody").hide();
+                              knapp.html("Read more");
                             }
+                            
+                            $("#"+id+"body").toggle();
                         });
                         
-                        $(window).resize(midtstill);
-                        midtstill();
                         
                         if (typeof(localStorage !== "undefined")) {
                               if (!localStorage.harTattHandling) {
@@ -112,6 +109,7 @@
         <?= galleri("thailandI"); ?>
         <?= galleri("bali"); ?>
         <?= galleri("matblogg"); ?>
+        <?= galleri("balikultur"); ?>
         
         <!--    HEADER    -->
         <div class="container">
@@ -123,21 +121,167 @@
           <p id="maintext">We are traveling through South-East Asia for 10 months. Follow our journey here.</p>
           
           <?php include("navmeny.php"); ?>
+        </div
         
-        </div>
-      
       
         <!--      HER BEGYNNER BLOGGEN     -->
         
-        <div class="col-md-8 col-xs-11" id="main">
+        <div class="col-md-8 col-xs-11 col-centered" id="main">
           
-          <?php //include("matblogg1.php"); ?>
           
           <!--   BALI        -->
           
           <h2>Indonesia</h2>
           
-          <!--<h3>Mount Rinjani</h3>-->
+          <?php //include("matblogg1.php"); ?>
+          <?php include("balikultur.php"); ?>
+          
+          <h3>Mount Rinjani</h3>
+          
+          <p>
+            After one week on the Gili's, we started to feel the urge for physical activity. As Indonesia is basically a chain of volcanoes, we had been thinking about climbing one of them for some time. We decided to trek Mount Rinjani (3726 m) situated in the middle of Lombok. We were transported from Bangsal to the village of Senaru where we spent one night mentally preparing for the tough trek and getting to know our fellow trekkers for the next three days; Josh, Savannah and Carmela.
+          </p>
+          
+          <h4>Day 1:</h4>
+          
+          <p>
+            7:00 the next day we started our ascent. 
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_2708.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_2708.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            We were accompanied by 4 insanely strong chain smoking porters (they claimed cigarettes made them stronger!) and one guide, each carrying around 25-30 kg in bamboo baskets carried on their shoulders. They prepared excellent meals, set up tents and toilets, and saw to our general needs.
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/porters.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/porters.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            The first three hours were gradual jungle ascent, the next three were steep savannah and rock climbing. 
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_2719.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_2719.jpg" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            A couple of hours before sunset we reached our first camp at the rim of the volcanic crater. The view down into the crater lake was extraordinary. We were tired but we felt good and were positively surprised by our own physical condition. Some photos from the rim and camp site:
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_8371.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_8371.JPG" />
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="bilder/bali/IMG_8384.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 venstre">
+                <img class="artpic" src="bilder/bali/IMG_8384.JPG" />
+              </div>
+            </a>
+            <a href="bilder/bali/IMG_8385.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 hoyre">
+                <img class="artpic" src="bilder/bali/IMG_8385.JPG" />
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="bilder/bali/IMG_8388.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_8388.JPG" />
+              </div>
+            </a>
+          </div>
+          
+          <h4>Day 2:</h4>
+          
+          <p>
+            The following day we started off with a steep, rocky three hour climb down to the crater lake. Here we enjoyed a super refreshing (and much needed), dip in the cold lake, followed by a lovely bath in the hot springs nearby. 
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_2720.jpg" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_2720.jpg" />
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="bilder/bali/IMG_8396.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 venstre">
+                <img class="artpic" src="bilder/bali/IMG_8396.JPG" />
+              </div>
+            </a>
+            <a href="bilder/bali/IMG_8402.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 hoyre">
+                <img class="artpic" src="bilder/bali/IMG_8402.JPG" />
+              </div>
+            </a>
+          </div>
+          <div class="row">
+            <a href="bilder/bali/IMG_8404.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 venstre">
+                <img class="artpic" src="bilder/bali/IMG_8404.JPG" />
+              </div>
+            </a>
+            <a href="bilder/bali/IMG_8410.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 hoyre">
+                <img class="artpic" src="bilder/bali/IMG_8410.JPG" />
+              </div>
+            </a>
+          </div>
+          
+          <p>
+            After lunch at the crater lake we climbed up, up, up to the final base camp at the foot of the summit. Here we collected firewood, bought beers at a provisional kiosk (the best and most expensive so far) and rested in the bright evening sun.
+          </p>
+          
+          <h4>Day 3:</h4>
+          
+          <p>
+            The final day we woke up at 2:00, chugged some breakfast, strapped on our headlamps and headed for the summit. This was by far the most challenging part of the trek. The ground was at this point made of deep, coarse, volcanic gravel, so that every step forward brought us half a step back. It took us three hours of this until we reached the summit. It was still dark, but after 20 blistering cold minutes, the sky began to brighten and we watched the sun rise together with lots of shivering but proud and happy people.
+          </p>
+          
+          <div class="row">
+            <a href="bilder/bali/IMG_8414.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-12">
+                <img class="artpic" src="bilder/bali/IMG_8414.JPG" />
+              </div>
+            </a>
+          </div>
+            <div class="row">
+            <a href="bilder/bali/IMG_8447.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 venstre">
+                <img class="artpic" src="bilder/bali/IMG_8447.JPG" />
+              </div>
+            </a>
+            <a href="bilder/bali/IMG_8450.JPG" data-gallery="#blueimp-gallery-bali">
+              <div class="col-sm-6 hoyre">
+                <img class="artpic" src="bilder/bali/IMG_8450.JPG" />
+              </div>
+            </a>
+          </div>
+  
+          <p>
+            We made it down the other side of the mountain after a second breakfast, and made our way promptly back to Bali in order to fly back to Bangkok the next day. We had a wonderful trek, and we are so happy we went through with it and that we made such good friends along the way. So that's it for our adventures in Bali and Lombok, now it's back to Bangkok for a few days and then onwards to Myanmar. 
+          </p>
           
           <h3>Gili Islands</h3>
           
@@ -696,8 +840,8 @@
           </div>
           
         </div> <!-- end #main -->
+            
       
-
       <script src="<?=$blueimp_js;?>"></script>
       <script src="<?=$blueimp_jquery_js;?>"></script>
   </body>      

@@ -39,7 +39,7 @@
             
             <?php if (!$albumvalgt) : ?>
                 <?php foreach ($albums as $albumnavn => $coverbilde): ?>
-                    
+    
                     <div class="col-sm-3" >
                         <a href="gallery.php?album=<?=$albumnavn;?>" class="thumbnail">
                             <div class="galleryphoto mainmenu" style="background-image: url('<?= "bilder/".$albumnavn."/".$coverbilde; ?>');">

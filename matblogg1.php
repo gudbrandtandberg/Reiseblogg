@@ -1,11 +1,12 @@
 
-<div class="matbloggcover col-sm-12">
-    <img class="matbloggbilde" src="bilder/matblogg/IMG_2509.JPG"/>
-    <span class="matbloggtittel">GOOZY'S FOODBLOG</span>
-    <span class="matbloggknapp">Read more</span>
+<div class="featurecover col-sm-12">
+    <img class="featurebilde" src="bilder/matblogg/IMG_2509.JPG"/>
+    <span class="featuretittel">GOOZY'S FOODBLOG</span>
+    <span id="matbloggknapp" toggle="matblogg" class="featureknapp">Read more</span>
 </div>
 <br>
-<div class="matbloggbody">
+    
+<div id="matbloggbody">
     <h3>Welcome!</h3>
     <p>
         Let me let you in on a little secret: I've always wanted my own foodblog. Or cookery show. Well now, it seems
